@@ -48,5 +48,5 @@ jobs:
             gh release create "$GITHUB_REF_NAME" CommitBox.zip --title "CommitBox $GITHUB_REF_NAME" --generate-notes
           else
             gh release delete latest --yes --cleanup-tag || true
-            gh release create latest CommitBox.zip --title "Latest build" --notes "Built from $GITHUB_SHA." --prerelease --target "$GITHUB_SHA"
+            gh release create latest CommitBox.zip --title "Latest build" --notes "Built from $GITHUB_SHA." --target "$GITHUB_SHA"
           fi
